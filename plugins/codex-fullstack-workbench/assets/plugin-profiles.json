@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "catalogReviewedAt": "2026-07-22",
+  "profiles": {
+    "core-development": {
+      "recommended": ["superpowers", "build-web-apps", "browser", "github"]
+    },
+    "skill-management": {
+      "recommended": ["find-skills"],
+      "useWhenAvailable": ["skill-creator", "plugin-creator"]
+    },
+    "web-fullstack": {
+      "recommended": ["build-web-data-visualization"],
+      "chooseOneDatabase": ["supabase", "neon-postgres"],
+      "chooseOneDeploy": ["vercel", "cloudflare", "netlify", "render"],
+      "chooseDesignByWorkflow": ["figma", "product-design"]
+    },
+    "production-loop": {
+      "recommended": ["codex-security", "sentry", "posthog"],
+      "chooseOneUiReplay": ["jam", "replayio"]
+    },
+    "ai-app": {
+      "recommended": ["openai-developers"],
+      "optional": ["hugging-face"]
+    },
+    "mobile": {
+      "chooseByStack": ["expo", "build-ios-apps"]
+    },
+    "knowledge": {
+      "recommended": ["documents", "pdf", "spreadsheets", "presentations"],
+      "chooseOneResearchLibrary": ["zotero", "readwise"]
+    },
+    "media": {
+      "chooseByWorkflow": ["remotion", "hyperframes"],
+      "localTools": ["ffmpeg", "openmontage"]
+    },
+    "durable-workflows": {
+      "optional": ["temporal"]
+    },
+    "business-connectors": {
+      "installOnlyWhenUsed": [
+        "atlassian-rovo",
+        "box",
+        "gmail",
+        "google-calendar",
+        "google-drive",
+        "notion",
+        "outlook-calendar",
+        "outlook-email",
+        "sharepoint",
+        "slack",
+        "teams"
+      ]
+    }
+  },
+  "rules": [
+    "Do not install external plugins without user confirmation.",
+    "Do not authenticate external services automatically.",
+    "Choose one primary provider for overlapping categories.",
+    "Verify callable permissions separately from installation state."
+  ]
+}

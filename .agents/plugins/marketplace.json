@@ -1,0 +1,20 @@
+{
+  "name": "codex-fullstack-workbench",
+  "interface": {
+    "displayName": "Codex Fullstack Workbench"
+  },
+  "plugins": [
+    {
+      "name": "codex-fullstack-workbench",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-fullstack-workbench"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

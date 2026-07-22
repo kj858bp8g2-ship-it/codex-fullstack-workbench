@@ -1,0 +1,4 @@
+interface:
+  display_name: "Context Headroom"
+  short_description: "Preserve context quality and reduce token waste"
+  default_prompt: "Use $context-headroom to keep this long task focused and token-efficient."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Database and Auth"
+  short_description: "Handle schemas, queries, auth, and migrations safely"
+  default_prompt: "Use $database-auth to review this schema, query, or authorization change."

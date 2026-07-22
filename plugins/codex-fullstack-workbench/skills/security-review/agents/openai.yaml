@@ -1,0 +1,4 @@
+interface:
+  display_name: "Security Review"
+  short_description: "Audit code changes, secrets, permissions, and dependencies"
+  default_prompt: "Use $security-review to assess this change and report evidence-backed risks."

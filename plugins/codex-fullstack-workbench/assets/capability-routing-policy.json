@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "benefitWeights": {
+    "taskSpecificityAndFit": 0.35,
+    "qualityAndVerificationGain": 0.25,
+    "riskReduction": 0.20,
+    "deterministicResources": 0.10,
+    "repeatabilityAndLeverage": 0.10
+  },
+  "costWeights": {
+    "contextLoad": 0.40,
+    "permissionsDataAndNetwork": 0.30,
+    "setupAndMaintenance": 0.20,
+    "overlapAndTriggerConflict": 0.10
+  },
+  "scale": {
+    "minimum": 0,
+    "maximum": 5
+  },
+  "formula": "net = weightedBenefit - 0.6 * weightedCost",
+  "thresholds": {
+    "activate": 2.0,
+    "conditional": 1.0,
+    "useGeneralCapabilityBelow": 1.0
+  },
+  "defaults": {
+    "maxPrimarySkillsPerSlice": 1,
+    "maxSupportingSkillsPerSlice": 1,
+    "loadReferencesOnlyWhenNeeded": true,
+    "installOrAuthenticateAutomatically": false,
+    "scheduledMaintenanceDefaultsToAuditOnly": true,
+    "knowledgePromotionRequiresEvidence": true
+  },
+  "overrides": [
+    "Use a user-explicitly named skill when it is available and in scope.",
+    "Use a matching artifact or platform skill when it materially improves fidelity.",
+    "Use relevant security, database, authorization, migration, and deployment controls for high-risk changes.",
+    "Require confirmation before installing, authenticating, sending, publishing, deploying, migrating, or expanding permissions."
+  ],
+  "antiPatterns": [
+    "Do not invoke a skill to satisfy a usage quota.",
+    "Do not ignore a specialist skill when it has clear material advantage.",
+    "Do not load an entire profile into context for one task.",
+    "Do not equate installed, authenticated, callable, and authorized states."
+  ]
+}

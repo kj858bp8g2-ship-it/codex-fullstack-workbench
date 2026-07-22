@@ -1,0 +1,16 @@
+# Merge only the settings you understand into your Codex config.toml.
+# Do not replace an existing config file with this example.
+
+# Maximum tokens retained from one tool output. 12,000 is the documented
+# example value, not a universal optimum. Lower values save context but may
+# hide the useful part of long test or build logs.
+tool_output_token_limit = 12000
+
+# Leave model metadata unset to use the selected model's catalog defaults.
+# Only uncomment these after `/status` confirms the actual model and context.
+# model_context_window = 128000
+# model_auto_compact_token_limit = 64000
+# model_auto_compact_token_limit_scope = "total"
+
+# A custom compact prompt is optional and should be reviewed like code.
+# experimental_compact_prompt_file = "./compact_prompt.txt"

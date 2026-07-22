@@ -1,0 +1,4 @@
+interface:
+  display_name: "Delivery and Deploy"
+  short_description: "Prepare reviewable changes and safe deployments"
+  default_prompt: "Use $delivery-deploy to prepare, verify, and hand off this release."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Onboard"
+  short_description: "Map the repository before making changes"
+  default_prompt: "Use $project-onboard to understand this repository before changing it."

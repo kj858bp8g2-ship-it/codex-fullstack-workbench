@@ -1,0 +1,4 @@
+interface:
+  display_name: "Daily Toolbox"
+  short_description: "Route useful local tools for everyday developer work"
+  default_prompt: "Use $daily-toolbox to choose the smallest reliable tool for this task."

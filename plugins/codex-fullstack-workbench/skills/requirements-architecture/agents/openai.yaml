@@ -1,0 +1,4 @@
+interface:
+  display_name: "Requirements and Architecture"
+  short_description: "Turn requests into bounded technical plans"
+  default_prompt: "Use $requirements-architecture to define scope, architecture, and verification."

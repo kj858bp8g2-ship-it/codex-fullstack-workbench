@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "kind": "workbench",
+      "name": "codex-fullstack-workbench",
+      "source": "<GitHub repository URL>",
+      "ref": "main",
+      "installedRevision": "<commit or release tag recorded at install>",
+      "scope": "project",
+      "updateMode": "audit-only",
+      "trusted": false,
+      "licenseReviewed": false,
+      "lastValidatedAt": null
+    }
+  ],
+  "rules": [
+    "Replace placeholders from the actual installation source; do not guess upstream repositories.",
+    "Add third-party skills and plugin marketplaces only after source and license review.",
+    "Unknown or untracked sources remain report-only.",
+    "Changing trusted, scope, or updateMode requires explicit user review."
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Backend and API"
+  short_description: "Design reliable backend services and API contracts"
+  default_prompt: "Use $backend-api to design and implement a reliable API change."

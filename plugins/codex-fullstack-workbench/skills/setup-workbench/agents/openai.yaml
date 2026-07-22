@@ -1,0 +1,4 @@
+interface:
+  display_name: "Setup Workbench"
+  short_description: "Detect the project and configure the workbench safely"
+  default_prompt: "Use $setup-workbench to inspect this project and propose a safe workbench setup."

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "defaultCadence": "weekly",
+  "defaultMode": "audit-only",
+  "targets": [
+    "workbench",
+    "project-skills",
+    "plugin-marketplaces",
+    "installed-plugins"
+  ],
+  "sourcePolicy": {
+    "trustedSourcesOnly": true,
+    "downloadToTemporaryDirectory": true,
+    "untrackedSourceAction": "report-only",
+    "requireLicenseAndMaintainerReview": true
+  },
+  "automaticActions": {
+    "checkRemoteVersions": true,
+    "readReleaseNotes": true,
+    "diffInstructionsScriptsAndPermissions": true,
+    "runAvailableValidators": true,
+    "replaceActiveFiles": false,
+    "forceOverwrite": false,
+    "upgradePluginMarketplaces": false,
+    "installOrAuthenticatePlugins": false,
+    "commitPushPublishOrDeploy": false
+  },
+  "reviewedMode": {
+    "name": "stage-trusted-updates",
+    "requiresExplicitOptIn": true,
+    "gitRepositoryUsesIsolatedWorktree": true,
+    "nonGitProjectFallsBackToAuditOnly": true,
+    "globalAndExternalUpdatesRemainReportOnly": true
+  },
+  "changeClasses": {
+    "low": [
+      "documentation-only",
+      "metadata-only",
+      "source-pinned-content-with-no-new-permissions"
+    ],
+    "medium": [
+      "skill-instruction-change",
+      "trigger-description-change",
+      "new-or-changed-local-script"
+    ],
+    "high": [
+      "new-network-access",
+      "new-external-write",
+      "authentication-change",
+      "global-install",
+      "hook-or-mcp-change",
+      "sandbox-or-permission-expansion",
+      "unknown-or-untracked-source"
+    ]
+  },
+  "reportFields": [
+    "source",
+    "installedVersionOrRevision",
+    "availableVersionOrRevision",
+    "changeSummary",
+    "scriptsAndPermissionsDelta",
+    "validation",
+    "riskClass",
+    "recommendedAction",
+    "rollback"
+  ]
+}

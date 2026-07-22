@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Lifecycle"
+  short_description: "Maintain skills, updates, and reusable knowledge"
+  default_prompt: "Use $skill-lifecycle to find, update, or create the smallest trustworthy capability, and compound only validated recurring knowledge."

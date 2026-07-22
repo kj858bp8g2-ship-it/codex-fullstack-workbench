@@ -1,0 +1,36 @@
+{
+  "name": "codex-fullstack-workbench",
+  "version": "0.1.0",
+  "description": "A full-dimension, context-efficient Codex workbench with safe maintenance and knowledge compounding.",
+  "author": {
+    "name": "Codex Fullstack Workbench Contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "fullstack",
+    "developer-workflow",
+    "skills",
+    "context-headroom",
+    "automation",
+    "knowledge-compounding"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex Fullstack Workbench",
+    "shortDescription": "Fullstack workflows, safe updates, and reusable knowledge",
+    "longDescription": "A community workbench for project onboarding, fullstack delivery, UI quality, security, context headroom, document ingestion, weekly capability maintenance, and validated knowledge compounding.",
+    "developerName": "Codex Fullstack Workbench Contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "使用 $setup-workbench 检查当前项目，只检测并给建议，不要自动安装、登录或修改文件。",
+      "先理解项目和验收标准，再规划、实施、验证和审查这个功能；不要提交、推送或部署。",
+      "使用 $frontend-quality 审查这个界面的视觉层级、响应式、状态和可访问性。"
+    ]
+  }
+}

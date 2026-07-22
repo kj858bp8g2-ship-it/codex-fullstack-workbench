@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "catalogReviewedAt": "2026-07-22",
+  "coverageModel": "core-routing-plus-on-demand-specialists",
+  "profiles": {
+    "core-routing": {
+      "bundled": [
+        "setup-workbench",
+        "project-onboard",
+        "requirements-architecture",
+        "frontend-quality",
+        "backend-api",
+        "database-auth",
+        "testing-debugging",
+        "security-review",
+        "delivery-deploy",
+        "context-headroom",
+        "document-ingest",
+        "daily-toolbox",
+        "skill-lifecycle"
+      ]
+    },
+    "workflow-framework": {
+      "chooseOnePrimary": ["superpowers", "gsd:*", "ops:*"],
+      "conditional": ["multi-agent", "using-git-worktrees", "handoff"]
+    },
+    "skill-and-plugin-extension": {
+      "recommended": ["find-skills", "skill-creator", "plugin-creator"],
+      "conditional": ["skill-installer", "mcp-builder", "public-plugin-builder", "skill-share", "uninstall", "scheduled-tasks"]
+    },
+    "codebase-context": {
+      "recommended": ["architecture", "code-health", "codebase-migrate"],
+      "conditional": ["llm-wiki", "index", "capture", "recall", "distill", "debrief", "user-context"]
+    },
+    "web-application": {
+      "recommended": ["frontend-app-builder", "react-best-practices", "shadcn"],
+      "conditional": ["nextjs", "route-handlers", "server-components", "server-actions", "turborepo", "turbopack"]
+    },
+    "design-and-motion": {
+      "chooseOnePrimary": ["frontend-design", "taste-skill", "impeccable", "ui-ux-pro-max"],
+      "conditional": ["apple-hig", "design-review", "design-qa", "gsap", "figma:*", "ckm:*"]
+    },
+    "backend-services": {
+      "recommended": ["architecture", "auth-patterns"],
+      "conditional": ["cron-jobs", "email", "cms", "payments", "routing-middleware"]
+    },
+    "data-auth-and-payments": {
+      "chooseDatabaseByProject": ["supabase", "neon-postgres"],
+      "conditional": ["supabase-postgres-best-practices", "stripe-best-practices", "payments"]
+    },
+    "testing-debugging-and-review": {
+      "recommended": ["test-driven-development", "systematic-debugging", "verification-before-completion"],
+      "conditional": ["playwright", "webapp-testing", "frontend-testing-debugging", "requesting-code-review", "receiving-code-review", "pr-review-ci-fix"]
+    },
+    "security-and-compliance": {
+      "recommended": ["security-audit", "security-guardrails"],
+      "conditional": ["exploits", "exploits-search", "vuln", "remediation", "codex-security", "domain-compliance-skills"]
+    },
+    "observability-and-incidents": {
+      "chooseByExistingStack": ["sentry-triage", "datadog-logs", "observability"],
+      "conditional": ["issue-triage", "support-ticket-triage", "investigation-mode", "posthog"]
+    },
+    "git-ci-release-and-cloud": {
+      "recommended": ["github", "gh-address-comments", "gh-fix-ci", "release-check"],
+      "chooseDeployByProject": ["vercel", "cloudflare", "netlify", "render"],
+      "conditional": ["deployments-cicd", "deploy-pipeline", "finishing-a-development-branch", "vercel-*"]
+    },
+    "mobile-and-native": {
+      "chooseByStack": ["expo:*", "build-ios-apps:*"],
+      "conditional": ["building-native-ui", "native-data-fetching", "swiftui-*"]
+    },
+    "ai-agents-and-chatgpt-apps": {
+      "recommended": ["openai-docs", "agents-sdk", "ai-sdk", "mcp-builder"],
+      "conditional": ["ai-gateway", "ai-generation-persistence", "build-chatgpt-app", "chatgpt-app-submission", "langsmith-fetch", "hugging-face"]
+    },
+    "browser-and-computer-automation": {
+      "chooseByTask": ["browser", "control-chrome", "computer-use", "playwright", "agent-browser"],
+      "conditional": ["cron-jobs", "workflow"]
+    },
+    "documents-data-and-knowledge": {
+      "recommended": ["documents", "pdf", "spreadsheets", "presentations", "document-ingest"],
+      "conditional": ["excel-live-control", "json-canvas", "obsidian-markdown", "obsidian-bases", "notion-*", "zotero", "readwise"]
+    },
+    "research-and-collaboration": {
+      "recommended": ["research", "content-research-writer", "meeting-notes-and-actions"],
+      "conditional": ["meeting-insights-analyzer", "linear", "internal-comms", "email-draft-polish", "workplace-connectors"]
+    },
+    "media-brand-and-content": {
+      "chooseByOutput": ["imagegen", "canvas-design", "remotion-best-practices", "hyperframes", "cheat-on-content"],
+      "conditional": ["image-enhancer", "brand-guidelines", "humanizer-zh", "youtube-transcript", "youtube-downloader", "canva-*"]
+    },
+    "product-business-and-finance": {
+      "chooseByRole": ["feature-spec", "brief", "market-size", "financial-model", "analyze-pitch-deck"],
+      "conditional": ["cap-table-waterfall", "lead-research-assistant", "competitive-ads-extractor", "developer-growth-analysis", "deal-sourcing-signals"]
+    },
+    "vertical-domains": {
+      "installOnlyForRealDomain": ["mortgage-*", "feedoracle-compliance", "fund-operations", "closing-costs", "about-atlantic-home-mortgage"]
+    }
+  },
+  "rules": [
+    "Frequency is one signal, not the definition of value.",
+    "Keep rare but high-impact recovery, migration, security, and compliance capabilities discoverable.",
+    "Do not activate every specialist in the default context.",
+    "Choose one primary workflow framework and one primary tool for overlapping categories.",
+    "Review source, license, scripts, permissions, and validation before installation.",
+    "Treat account connectors and vertical-domain skills as explicit opt-ins.",
+    "Automate update discovery and validation, but require review before replacing active or global capabilities.",
+    "Promote only validated recurring knowledge; retire stale guidance instead of growing context forever."
+  ]
+}

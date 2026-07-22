@@ -1,0 +1,55 @@
+name: Validate repository
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate manifests, skills, links, and public content
+        run: python scripts/validate_repository.py
+      - name: Smoke test Skill inventory
+        run: python scripts/audit_skill_inventory.py --root plugins/codex-fullstack-workbench/skills --format summary
+      - name: Check Bash syntax
+        run: |
+          bash -n plugins/codex-fullstack-workbench/scripts/bootstrap.sh
+          bash -n plugins/codex-fullstack-workbench/scripts/init-knowledge.sh
+          bash -n plugins/codex-fullstack-workbench/scripts/verify-workbench.sh
+          bash -n plugins/codex-fullstack-workbench/skills/document-ingest/scripts/convert-document.sh
+      - name: Smoke test Bash bootstrap
+        run: |
+          target=$(mktemp -d)
+          bash plugins/codex-fullstack-workbench/scripts/bootstrap.sh --project "$target" --install-skills
+          bash plugins/codex-fullstack-workbench/scripts/bootstrap.sh --project "$target" --install-skills --apply
+          bash plugins/codex-fullstack-workbench/scripts/verify-workbench.sh --project "$target"
+          bash plugins/codex-fullstack-workbench/scripts/init-knowledge.sh --project "$target"
+          test ! -e "$target/.codex-workbench/knowledge/inbox.md"
+          bash plugins/codex-fullstack-workbench/scripts/init-knowledge.sh --project "$target" --apply
+          printf '%s\n' 'CI_SENTINEL' >> "$target/.codex-workbench/knowledge/inbox.md"
+          bash plugins/codex-fullstack-workbench/scripts/init-knowledge.sh --project "$target" --apply
+          grep -q 'CI_SENTINEL' "$target/.codex-workbench/knowledge/inbox.md"
+      - name: Smoke test PowerShell bootstrap
+        shell: pwsh
+        run: |
+          $target = Join-Path ([System.IO.Path]::GetTempPath()) ("codex-workbench-" + [guid]::NewGuid())
+          New-Item -ItemType Directory -Path $target | Out-Null
+          & ./plugins/codex-fullstack-workbench/scripts/bootstrap.ps1 -ProjectPath $target -InstallSkills
+          & ./plugins/codex-fullstack-workbench/scripts/bootstrap.ps1 -ProjectPath $target -InstallSkills -Apply
+          & ./plugins/codex-fullstack-workbench/scripts/verify-workbench.ps1 -ProjectPath $target
+          & ./plugins/codex-fullstack-workbench/scripts/init-knowledge.ps1 -ProjectPath $target
+          if (Test-Path -LiteralPath (Join-Path $target '.codex-workbench/knowledge/inbox.md')) { throw 'Preview wrote knowledge files.' }
+          & ./plugins/codex-fullstack-workbench/scripts/init-knowledge.ps1 -ProjectPath $target -Apply
+          $inbox = Join-Path $target '.codex-workbench/knowledge/inbox.md'
+          Add-Content -LiteralPath $inbox -Value 'CI_SENTINEL'
+          & ./plugins/codex-fullstack-workbench/scripts/init-knowledge.ps1 -ProjectPath $target -Apply
+          if (-not (Select-String -LiteralPath $inbox -Pattern 'CI_SENTINEL' -Quiet)) { throw 'Existing knowledge was overwritten.' }
