@@ -24,11 +24,11 @@
 
 ## 最适合小白：把 GitHub 链接交给 Codex
 
-先在 Codex 中打开你要配置的项目，再把本仓库的真实 GitHub 链接替换进下面的提示词。Codex 会把 Workbench 部署到当前项目；这里的“部署”只指写入项目级 `AGENTS.md` 和 `.agents/skills/`，不包含应用上线、云服务配置或生产发布。
+先在 Codex 中打开你要配置的项目，再把下面的 GitHub 链接交给它。Codex 会把 Workbench 部署到当前项目；这里的“部署”只指写入项目级 `AGENTS.md` 和 `.agents/skills/`，不包含应用上线、云服务配置或生产发布。
 
 ```text
 请把这个开源 Codex Workbench 部署到我当前打开的项目：
-<GitHub 仓库链接>
+https://github.com/kj858bp8g2-ship-it/codex-fullstack-workbench
 
 先读取仓库的 README.md 和 SECURITY.md，再检查当前操作系统、项目根目录、Git 状态，以及已有的 AGENTS.md 和 .agents/skills。
 默认采用项目级安装：
