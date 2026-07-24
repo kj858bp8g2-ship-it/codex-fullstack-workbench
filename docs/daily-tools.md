@@ -42,7 +42,9 @@ bash ./plugins/codex-fullstack-workbench/skills/document-ingest/scripts/convert-
 
 - `rg`：文本、文件和配置定位的默认工具。
 - Git/GitHub：状态、Diff、PR 和 CI。
-- Codebase Memory 或 Codegraph：大型跨文件仓库按需选择，小项目不默认安装。
+- CodeGraph：需要快速追踪跨文件调用链、依赖关系或架构路径时按需使用；查询应从一个明确问题和目录开始。
+- Codebase Memory：长期维护的大仓库按需建立本地索引，用于架构检索、图搜索、路径追踪和变更检测。
+- 两者不是默认常驻组合：先用 `rg`；大型任务再选一个主索引，命中不足或索引陈旧时才切换。索引结果必须回到真实文件、测试和浏览器验证。
 
 ## 浏览器与验证
 

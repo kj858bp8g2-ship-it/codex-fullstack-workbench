@@ -13,11 +13,12 @@ description: "为开发者日常任务选择最小可靠工具链。适用于网
 - UI 验证：真实浏览器、截图和视口检查；不以 HTML/CSS 静态阅读替代。
 - GitHub：本地 Git 负责 Diff；远程 Issue/PR 操作需用户授权与认证。
 - 文档：优先 `document-ingest` 与 MarkItDown；复杂文档、PDF、表格使用对应专用能力。
-- 代码库理解：先用 `rg` 和语言工具；大型长期项目再考虑本地代码索引。
+- 代码库理解：先用 `rg` 和语言工具；大型长期项目再按需在 CodeGraph 与 Codebase Memory 中选择一个主索引，不为“全覆盖”同时常驻两个索引。
 - 媒体：先检查 FFmpeg；拼接、抽帧、字幕等重复流程再使用专用工具。
 - 外部协作：Notion、Slack、邮箱、日历等连接器仅在真实工作流需要且用户同意时启用。
 
 详细选择表见 [references/tool-routing.md](references/tool-routing.md)。
+代码库索引的触发、选择、验证与维护边界见 [references/codebase-indexing.md](references/codebase-indexing.md)。
 
 ## 原则
 

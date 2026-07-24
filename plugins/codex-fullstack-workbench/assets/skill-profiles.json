@@ -30,6 +30,7 @@
     },
     "codebase-context": {
       "recommended": ["architecture", "code-health", "codebase-migrate"],
+      "chooseOnePrimaryIndex": ["codegraph", "codebase-memory"],
       "conditional": ["llm-wiki", "index", "capture", "recall", "distill", "debrief", "user-context"]
     },
     "web-application": {

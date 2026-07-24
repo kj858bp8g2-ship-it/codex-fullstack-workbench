@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Added an explicit optional CodeGraph / Codebase Memory profile with routing, verification, freshness, and data-boundary guidance for large codebases.
+
 - Added the `codex-fullstack-workbench` plugin with 13 focused Skills, including Skill lifecycle management.
 - Added a reusable `AGENTS.md` template and an opt-in Context Headroom example.
 - Added safe project bootstrap and verification scripts for PowerShell and Bash.

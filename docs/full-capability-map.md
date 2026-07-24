@@ -19,7 +19,7 @@
 | 需求、产品与架构 | PRD、成功标准、系统设计、方案权衡 | `requirements-architecture` | `feature-spec`、`brief`、`architecture`、`create-plan` | 按任务触发 |
 | 长任务与执行框架 | TDD、阶段计划、自治执行、Worktree | 核心工作循环 | Superpowers、`gsd:*`、`ops:*` | 选一个主框架，避免三套同时接管流程 |
 | Skill、插件与 MCP | 查找、安装、每周更新审计、创建、分享、卸载 | `skill-lifecycle` | `find-skills`、`skill-creator`、`plugin-creator`、`mcp-builder`、Scheduled | 自动检查与验证，覆盖、全局更新和认证前确认 |
-| 代码库理解与记忆 | 仓库地图、迁移、长期知识、复利、交接 | `project-onboard` / `skill-lifecycle` | `codebase-migrate`、`llm-wiki`、`index`、`capture`、`recall`、`distill`、`debrief`、`handoff` | 只沉淀高信号且已验证内容，定期淘汰 |
+| 代码库理解与记忆 | 仓库地图、迁移、长期知识、复利、交接 | `project-onboard` / `skill-lifecycle` | CodeGraph、Codebase Memory、`codebase-migrate`、`llm-wiki`、`index`、`capture`、`recall`、`distill`、`debrief`、`handoff` | 先用搜索；大型任务只选一个主索引，回到真实文件验证 |
 | Web 前端工程 | React、Next.js、路由、组件和性能 | `frontend-quality` | `frontend-app-builder`、`react-best-practices`、`shadcn`、`nextjs`、`turborepo` | 按真实栈选择 |
 | UI、设计与动效 | 视觉方向、设计系统、Figma、动画 | `frontend-quality` | `frontend-design`、Taste Skill、Impeccable、`apple-hig`、`gsap`、`figma:*` | 主审美能力选一个，平台规范条件式叠加 |
 | 后端与 API | 服务、Webhook、队列、缓存、邮件 | `backend-api` | `auth-patterns`、`cron-jobs`、`email`、`cms`、`payments` | 由架构和依赖触发 |
