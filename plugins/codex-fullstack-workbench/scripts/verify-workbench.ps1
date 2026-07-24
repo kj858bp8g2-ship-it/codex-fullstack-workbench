@@ -34,6 +34,7 @@ $requiredAssets = @(
     'config.headroom.example.toml',
     'maintenance-policy.json',
     'plugin-profiles.json',
+    'project-profiles.json',
     'source-registry.template.json',
     'skill-profiles.json'
 )

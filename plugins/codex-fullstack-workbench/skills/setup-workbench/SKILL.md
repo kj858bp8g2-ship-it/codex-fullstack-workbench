@@ -11,7 +11,7 @@ description: "为现有或新项目建立安全、渐进式的 Codex 工作台�
 
 1. 读取最近的 `AGENTS.md`、README、包管理文件与 Git 状态。
 2. 读取 [references/setup-checklist.md](references/setup-checklist.md)，识别操作系统、技术栈、可用命令和权限边界。
-3. 读取插件根目录 `assets/capability-routing-policy.json`、`assets/skill-profiles.json`、`assets/plugin-profiles.json` 与 `assets/maintenance-policy.json`；项目级安装时读取 `.agents/assets/` 和 `.codex-workbench/maintenance-policy.json` 中的对应文件。根据任务净收益选择最小 Profile，不要因“以后可能用到”安装全部能力，也不要在明显有专业增益时回避使用。
+3. 读取插件根目录 `assets/capability-routing-policy.json`、`assets/skill-profiles.json`、`assets/plugin-profiles.json`、`assets/project-profiles.json` 与 `assets/maintenance-policy.json`；项目级安装时读取 `.agents/assets/` 和 `.codex-workbench/maintenance-policy.json` 中的对应文件。先从项目 Profiles 判断当前项目的完整覆盖路径，再按任务净收益选择最小激活集合；不要因“以后可能用到”安装全部能力，也不要在明显有专业增益时回避使用。
 4. 当现有能力确实不足时，转到 `skill-lifecycle` 搜索、评估或创建 Skill。
 5. 如需项目级配置，先执行插件根目录 `scripts/bootstrap.ps1` 或 `scripts/bootstrap.sh` 的预览模式。
 6. 展示将创建、跳过或备份的文件，得到用户确认后才使用 `-Apply` 或 `--apply`。
@@ -23,6 +23,8 @@ description: "为现有或新项目建立安全、渐进式的 Codex 工作台�
 
 - 纯本地开发：先使用本插件，不要求外部连接器。
 - Web 项目：按需增加浏览器、GitHub、部署平台和一个数据库提供方。
+- 前端产品 UI：`frontend-quality` 是质量门槛；只有营销、品牌或作品集等需要明确艺术方向的页面，才在它之外选择一个审美专家。
+- AI、移动端、文档数据、生产可靠性、日常研发和媒体内容：先匹配 `project-profiles.json` 中的 Profile，再按实际技术栈与授权范围选择条件能力。
 - 生产闭环：只有在项目确实使用相应服务时，才选择安全、错误监控与产品分析插件。
 - 重叠能力二选一，例如 Supabase/Neon、Jam/Replay.io、Zotero/Readwise。
 - “已安装”不等于“当前任务可调用”；分别验证安装、认证和权限。

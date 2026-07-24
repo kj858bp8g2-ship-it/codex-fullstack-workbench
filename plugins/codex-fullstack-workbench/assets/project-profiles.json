@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "selectionModel": "The Workbench installs all 13 routing Skills, but a task loads one primary route and at most one supporting route. External profiles are recommendations, never implicit installs.",
+  "profiles": {
+    "web-product-fullstack": {
+      "label": "Web 全栈产品",
+      "useWhen": ["要交付浏览器中的完整产品", "前端、API、数据与交付都在同一项目范围"],
+      "typicalRoutes": ["project-onboard", "requirements-architecture", "frontend-quality", "backend-api", "database-auth", "testing-debugging", "security-review", "delivery-deploy"],
+      "conditionalCapabilities": ["browser", "github", "frontend-app-builder", "react-best-practices", "choose one of supabase or neon-postgres", "choose the actual deploy provider"],
+      "notDefault": ["Do not install every database, deploy, analytics, or UI replay provider."],
+      "doneWhen": ["API contract and authorization are verified", "desktop and mobile browser paths are checked", "tests and a release gate match the change risk"]
+    },
+    "backend-service": {
+      "label": "后端服务与集成",
+      "useWhen": ["以 API、Webhook、队列、缓存或第三方集成为主要交付"],
+      "typicalRoutes": ["project-onboard", "requirements-architecture", "backend-api", "database-auth", "testing-debugging", "security-review", "delivery-deploy"],
+      "conditionalCapabilities": ["auth-patterns", "cron-jobs", "email", "payments", "observability", "temporal only for durable workflows"],
+      "notDefault": ["Do not add an AI workflow engine, queue, or payment provider without a concrete product need."],
+      "doneWhen": ["input, errors, retries, idempotency and authorization are covered", "integration failure paths are tested", "secrets and production writes remain approval-gated"]
+    },
+    "frontend-product-ui": {
+      "label": "前端产品界面",
+      "useWhen": ["要实现或重构应用页面、组件、状态、交互或响应式体验"],
+      "typicalRoutes": ["project-onboard", "frontend-quality", "testing-debugging"],
+      "conditionalCapabilities": ["frontend-app-builder", "react-best-practices", "shadcn", "figma only when a source design exists", "one matching product design system"],
+      "notDefault": ["Do not treat a marketing-style aesthetic Skill as the default for dashboards, data tables, wizards, code editors, or native UI."],
+      "doneWhen": ["information hierarchy, loading, empty, error, focus and long-content states work", "mobile, keyboard, contrast and reduced motion are checked in a real browser", "the chosen design system remains consistent"]
+    },
+    "brand-marketing-site": {
+      "label": "品牌、官网与营销页面",
+      "useWhen": ["页面的第一印象、品牌识别、叙事和动效会直接影响转化或招聘"],
+      "typicalRoutes": ["requirements-architecture", "frontend-quality", "testing-debugging"],
+      "conditionalCapabilities": ["choose one of taste-skill, impeccable, frontend-design or ui-ux-pro-max", "imagegen or approved assets", "gsap only for motivated motion", "figma when a source design exists"],
+      "notDefault": ["Do not combine multiple aesthetic directors, fake screenshots, or motion added only for spectacle."],
+      "doneWhen": ["a concrete design read is stated before implementation", "visual direction is coherent instead of generic AI styling", "real viewport screenshots, performance and reduced-motion behavior are reviewed"]
+    },
+    "mobile-native": {
+      "label": "移动端与原生应用",
+      "useWhen": ["项目是 Expo、React Native、SwiftUI 或原生 iOS"],
+      "typicalRoutes": ["project-onboard", "requirements-architecture", "testing-debugging", "delivery-deploy"],
+      "conditionalCapabilities": ["choose Expo or Build iOS Apps by the real stack", "native UI guidance", "simulator or device verification"],
+      "notDefault": ["Do not copy Web component or browser assumptions into native UI."],
+      "doneWhen": ["target simulator or device is tested", "platform navigation, permissions and lifecycle behavior are verified"]
+    },
+    "ai-agent-application": {
+      "label": "AI、Agent 与 ChatGPT 应用",
+      "useWhen": ["产品包含模型调用、Agent、工具调用、MCP 或 AI 工作流"],
+      "typicalRoutes": ["requirements-architecture", "backend-api", "security-review", "testing-debugging", "delivery-deploy"],
+      "conditionalCapabilities": ["openai-docs", "agents-sdk", "ai-sdk", "mcp-builder", "langsmith-fetch when already used"],
+      "notDefault": ["Do not add a framework just because the app uses an LLM; do not expose credentials or silently grant tool permissions."],
+      "doneWhen": ["model, tool, data and approval boundaries are explicit", "failure and fallback behavior are tested", "observability and cost-sensitive paths are reviewed"]
+    },
+    "documents-data-knowledge": {
+      "label": "文档、表格、数据与知识工作流",
+      "useWhen": ["任务输入或输出是 PDF、Office、表格、演示文稿、Markdown 或知识库"],
+      "typicalRoutes": ["document-ingest", "daily-toolbox", "testing-debugging"],
+      "conditionalCapabilities": ["markitdown", "documents", "pdf", "spreadsheets", "presentations", "obsidian or notion only when actually used"],
+      "notDefault": ["Do not treat lossy conversion as source truth or ingest confidential documents without checking the boundary."],
+      "doneWhen": ["source, conversion method and known loss are recorded", "key values, tables or citations are sampled against the original"]
+    },
+    "production-reliability": {
+      "label": "生产质量、安全与交付闭环",
+      "useWhen": ["改动会影响生产、权限、支付、数据迁移、事故响应或发布"],
+      "typicalRoutes": ["testing-debugging", "security-review", "delivery-deploy"],
+      "conditionalCapabilities": ["codex-security", "sentry", "datadog-logs", "posthog", "gh-fix-ci", "release-check"],
+      "notDefault": ["Installed does not mean authenticated, authorized, or safe to write. Remote actions still require confirmation."],
+      "doneWhen": ["risk-appropriate local and remote verification are distinguished", "rollback or stop conditions are stated", "no synthetic result is presented as production evidence"]
+    },
+    "daily-developer-operations": {
+      "label": "日常研发与项目维护",
+      "useWhen": ["阅读代码、排查问题、研究资料、维护 GitHub、整理知识或做小型自动化"],
+      "typicalRoutes": ["project-onboard", "daily-toolbox", "context-headroom", "skill-lifecycle"],
+      "conditionalCapabilities": ["rg first", "choose one of codegraph or codebase-memory for a large repository", "github", "browser", "find-skills", "skill-creator"],
+      "notDefault": ["Do not index small one-off tasks, retain full chats, or install a new capability before verifying a real gap."],
+      "doneWhen": ["the minimum evidence needed for the task is collected", "reusable learning has evidence and scope before promotion", "maintenance runs audit-only unless explicitly approved"]
+    },
+    "media-and-content": {
+      "label": "图像、视频、品牌与内容",
+      "useWhen": ["交付物是图像、短视频、演示、品牌物料、脚本或内容工作流"],
+      "typicalRoutes": ["daily-toolbox", "requirements-architecture", "testing-debugging"],
+      "conditionalCapabilities": ["imagegen", "canvas-design", "remotion-best-practices or hyperframes", "ffmpeg or openmontage when locally available", "humanizer-zh"],
+      "notDefault": ["Do not call a static slideshow a finished video, publish synthetic demonstrations as live product footage, or use unlicensed voice or brand assets."],
+      "doneWhen": ["the actual rendered output is reviewed", "audio, captions, aspect ratio, rights and export settings are checked"]
+    }
+  },
+  "globalRules": [
+    "All 13 bundled Skills are installed as routes; they are not all loaded for one task.",
+    "Choose one primary Skill and at most one supporting Skill for an implementation slice unless independent risk controls require more.",
+    "External plugins, authentication, account data, remote writes, publishing, migration and deployment require explicit confirmation.",
+    "When an unknown but material capability gap remains, search with find-skills before creating a new Skill."
+  ]
+}

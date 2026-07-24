@@ -21,7 +21,7 @@
 | Skill、插件与 MCP | 查找、安装、每周更新审计、创建、分享、卸载 | `skill-lifecycle` | `find-skills`、`skill-creator`、`plugin-creator`、`mcp-builder`、Scheduled | 自动检查与验证，覆盖、全局更新和认证前确认 |
 | 代码库理解与记忆 | 仓库地图、迁移、长期知识、复利、交接 | `project-onboard` / `skill-lifecycle` | CodeGraph、Codebase Memory、`codebase-migrate`、`llm-wiki`、`index`、`capture`、`recall`、`distill`、`debrief`、`handoff` | 先用搜索；大型任务只选一个主索引，回到真实文件验证 |
 | Web 前端工程 | React、Next.js、路由、组件和性能 | `frontend-quality` | `frontend-app-builder`、`react-best-practices`、`shadcn`、`nextjs`、`turborepo` | 按真实栈选择 |
-| UI、设计与动效 | 视觉方向、设计系统、Figma、动画 | `frontend-quality` | `frontend-design`、Taste Skill、Impeccable、`apple-hig`、`gsap`、`figma:*` | 主审美能力选一个，平台规范条件式叠加 |
+| UI、设计与动效 | 视觉方向、设计系统、Figma、动画 | `frontend-quality` | `frontend-design`、Taste Skill、Impeccable、`apple-hig`、`gsap`、`figma:*` | `frontend-quality` 是质量门槛；官网/营销等再选一个审美专家，平台规范条件式叠加 |
 | 后端与 API | 服务、Webhook、队列、缓存、邮件 | `backend-api` | `auth-patterns`、`cron-jobs`、`email`、`cms`、`payments` | 由架构和依赖触发 |
 | 数据库、认证与支付 | Schema、迁移、RLS、会话、支付 | `database-auth` | Supabase、Neon、`stripe-best-practices` | 数据库和支付平台按项目选择 |
 | 测试、调试与代码审查 | 复现、TDD、E2E、PR Review | `testing-debugging` | `test-driven-development`、`systematic-debugging`、Playwright、`pr-review-ci-fix` | 基础验证默认，浏览器/E2E 条件式 |

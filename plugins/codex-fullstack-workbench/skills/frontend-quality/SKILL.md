@@ -15,7 +15,7 @@ description: "实现或审查具有明确视觉方向、响应式、可访问且
 4. 实现 loading、empty、error、disabled、focus、hover 和长内容状态。
 5. 在常见宽度验证响应式、键盘、对比度、语义结构和减少动效偏好。
 6. 使用真实浏览器或截图审查视觉结果；不要仅凭代码断言“好看”。
-7. 按 [references/visual-review.md](references/visual-review.md) 做最终审查。
+7. 先按 [references/aesthetic-routing.md](references/aesthetic-routing.md) 判断是否需要一个额外的审美专家，再按 [references/visual-review.md](references/visual-review.md) 做最终审查。
 
 ## 审美约束
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Added executable project Profiles covering Web full stack, backend services, product UI, brand sites, mobile, AI/Agent apps, document/data workflows, production reliability, daily development, and media/content.
+- Added an explicit frontend aesthetic routing rule: `frontend-quality` remains the quality gate; a single art-direction specialist is conditional, never a quota.
+
 All notable changes to this project will be documented in this file.
 
 ## Unreleased

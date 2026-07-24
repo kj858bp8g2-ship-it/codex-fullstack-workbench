@@ -43,6 +43,7 @@ REQUIRED_FILES = {
     PLUGIN / "assets" / "capability-routing-policy.json",
     PLUGIN / "assets" / "skill-profiles.json",
     PLUGIN / "assets" / "plugin-profiles.json",
+    PLUGIN / "assets" / "project-profiles.json",
     PLUGIN / "assets" / "maintenance-policy.json",
     PLUGIN / "assets" / "source-registry.template.json",
     PLUGIN / "assets" / "knowledge" / "README.md",
@@ -109,8 +110,14 @@ def validate_manifest(errors: list[str]) -> None:
     manifest = load_json(manifest_path, errors)
     marketplace = load_json(marketplace_path, errors)
     load_json(PLUGIN / "assets" / "plugin-profiles.json", errors)
+    project_profiles = load_json(PLUGIN / "assets" / "project-profiles.json", errors)
     if not isinstance(manifest, dict) or not isinstance(marketplace, dict):
         return
+
+    if not isinstance(project_profiles, dict) or not isinstance(project_profiles.get("profiles"), dict):
+        errors.append("project-profiles.json must contain a profiles object")
+    elif len(project_profiles["profiles"]) < 8:
+        errors.append("project-profiles.json must include the major project profiles")
 
     if manifest.get("name") != "codex-fullstack-workbench":
         errors.append("plugin.json name must be codex-fullstack-workbench")

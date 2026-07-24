@@ -38,7 +38,8 @@
       "conditional": ["nextjs", "route-handlers", "server-components", "server-actions", "turborepo", "turbopack"]
     },
     "design-and-motion": {
-      "chooseOnePrimary": ["frontend-design", "taste-skill", "impeccable", "ui-ux-pro-max"],
+      "coreQualityGate": ["frontend-quality"],
+      "chooseOneArtDirectionSpecialist": ["frontend-design", "taste-skill", "impeccable", "ui-ux-pro-max"],
       "conditional": ["apple-hig", "design-review", "design-qa", "gsap", "figma:*", "ckm:*"]
     },
     "backend-services": {

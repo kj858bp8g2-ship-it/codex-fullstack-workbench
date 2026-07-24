@@ -18,7 +18,7 @@
 
 13 个核心 Skill 是路由层，不是全部有价值能力的白名单。它们负责判断任务、执行通用流程和验证结果；Web、移动端、AI、设计、浏览器自动化、文档数据、研究协作、媒体内容、商业和垂直领域等专业能力保留在按需 Profile 中。
 
-完整分类、代表性 Skills、重叠选择和启用级别见 [完整能力地图](docs/full-capability-map.md)，机器可读清单见 [Skill Profiles](plugins/codex-fullstack-workbench/assets/skill-profiles.json)。判断标准不是“以前用没用过”，而是能力增量、风险降低、稀缺知识、恢复价值、可迁移性和可验证性。
+完整分类、代表性 Skills、重叠选择和启用级别见 [完整能力地图](docs/full-capability-map.md)。想知道一个项目从前端到部署、AI、移动端、文档数据、日常维护或媒体内容应如何组合，先看 [项目 Profiles](docs/project-profiles.md)；机器可读清单见 [Skill Profiles](plugins/codex-fullstack-workbench/assets/skill-profiles.json) 与 [Project Profiles](plugins/codex-fullstack-workbench/assets/project-profiles.json)。判断标准不是“以前用没用过”，而是能力增量、风险降低、稀缺知识、恢复价值、可迁移性和可验证性。
 
 具体调用不是凭感觉，也不设使用配额：[Skill 与插件调用权重](docs/capability-routing-policy.md) 会比较专业匹配、质量/验证增益、风险降低和确定性资源，再扣除 Context、权限、安装维护与能力重叠成本。明显提升结果时应使用；没有实际增益时不为了展示配置而调用。
 
